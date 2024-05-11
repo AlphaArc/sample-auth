@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require("../model/User");
 const multer = require('multer');
+const authMiddleware = require('../middleware/authMiddleware');
 
 // Set storage engine
 const storage = multer.diskStorage({
@@ -20,16 +21,13 @@ const upload = multer({ storage: storage });
 const { isAdmin, isNormalUser } = require('../middleware/authMiddleware');
 
 // Profile details
-router.get('/:userId', async(req, res) => {
-    const userId = req.params.userId;
-
+router.get('/profile', authMiddleware, async (req, res) => {
     try {
-        const user = await User.findById(userId);
+        const user = await User.findById(req.user._id);
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
 
-        // Return user profile details
         return res.status(200).json(user);
     } catch (error) {
         console.error(error);

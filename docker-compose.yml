@@ -22,6 +22,7 @@ services:
       - MONGODB_URI=mongodb://mongodb:27017/role_auth 
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
 
 volumes:
   mongodb-data:
