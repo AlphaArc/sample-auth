@@ -1,0 +1,9 @@
+{
+    "watch": [
+      "Voosh Auth/"
+    ],
+    "ext": "js",
+    "ignore": [
+      "*.test.js"
+    ]
+}

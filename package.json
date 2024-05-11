@@ -1,0 +1,34 @@
+{
+    "name": "voosh_role_auth",
+    "version": "1.0.0",
+    "description": "User Role Authentication",
+    "nodemonConfig": {
+        "watch": [
+            "server"
+        ]
+    },
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "dev": "nodemon app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.1",
+        "cookie-parser": "^1.4.6",
+        "cookieparser": "^0.1.0",
+        "dotenv": "^10.0.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.12",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^2.0.22",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0",
+        "passport-local": "^1.0.0"
+    }
+}
