@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const localDB = `mongodb://localhost:27017/role_auth`;
+const localDB = `mongodb://mongodb:27017/role_auth`;
 
 const connectDB = async () => {
   try {
